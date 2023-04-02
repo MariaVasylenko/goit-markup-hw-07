@@ -1,0 +1,21 @@
+@media screen and (min-width: 768px) {
+    .container{
+        max-width: 768px;}
+    }        
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .team-list {
+        flex-wrap: wrap;
+        gap: 0;
+        margin: -32px -12px;
+        padding: 0 93px;
+        }
+        
+    .team-item {
+        width:calc((100% - 24px * 2) / 2);
+        margin:32px 12px;  
+        }
+} 
+    
+
+    
+

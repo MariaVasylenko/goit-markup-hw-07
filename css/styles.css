@@ -49,7 +49,8 @@ textarea{
 }
 
 .container{
-    width: 1158px;
+    /*--max-width: 1158px;--*/
+    width: 100%;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -241,6 +242,7 @@ background: var(--focus-background-color);
     transition-property: visibility, opacity;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+    overflow-y: scroll;
 }
 .backdrop.is-hidden {
     visibility: hidden;
@@ -359,7 +361,7 @@ background: var(--focus-background-color);
 } 
 
 .comment {
-    min-height: 120px;
+    height: 120px;
     width: 100%;
     outline: none;
     border-color: 1px solid var(--header-accent-color);
@@ -832,9 +834,9 @@ margin-bottom: 16px;
     border: 1px solid var(--main-background-color);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    width: 100%;
     min-height: 40px;
-    padding: 8px 212px 8px 16px;
+    min-width: 264px;
+    padding-left: 16px;
     }
 
 .footer-form-inner::placeholder {

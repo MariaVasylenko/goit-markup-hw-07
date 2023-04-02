@@ -1,0 +1,35 @@
+@media screen and (min-width: 480px){
+    .container{
+        max-width: 428px;}  
+    
+}
+@media screen and (max-width: 1199px) {
+    .section {
+        padding:96px 0;
+      }
+    .work-examples {
+        display: none;
+    } 
+
+}
+@media screen and (max-width: 767px) {
+    /*--Team--*/
+    .team-list{
+        display: block;
+    }
+    .team-item:not(:last-child) {
+        margin-bottom: 72px;
+    }  
+    .team-item {
+        min-width: 264px;
+        margin-right: auto;
+        margin-left: auto;
+        } 
+
+    /*--customers--*/
+    .customers-list {
+        flex-wrap: wrap;
+    }
+}
+    
+
