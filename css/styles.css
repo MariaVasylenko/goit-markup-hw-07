@@ -47,7 +47,9 @@ body{
 textarea{
     resize: none;
 }
-
+address {
+    font-style: normal;
+}
 .container{
     /*--max-width: 1158px;--*/
     width: 100%;
@@ -100,6 +102,8 @@ textarea{
 .header-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+   
 }
 
 .header-navigation{
@@ -119,7 +123,7 @@ margin-right: 76px;
 .accent{color: var(--main-accent-color);}
 
 .header-list{
-    display: flex;
+    display: none;
     gap: 40px;
     transition-property: color;
     transition-duration: var(--duration);
@@ -133,6 +137,7 @@ margin-right: 76px;
 
 .header-link {
     position: relative;
+    padding: 24px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -143,7 +148,7 @@ margin-right: 76px;
     position: absolute;
     content:'';
     left: 0;
-    bottom: -147%;
+    bottom: 0;
     display: block;
     width: 100%;
     height: 4px;
@@ -154,7 +159,7 @@ margin-right: 76px;
 }
 
 .adress-list{
-    display:flex;
+    display:none;
     gap: 40px;
 }
 .header-mail {
@@ -187,29 +192,130 @@ margin-right: 76px;
 .header-tel:focus {
     color: var(--focus-background-color);
     }
-    
+.open-mobile {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: transparent;
+    border: none;
+} 
+.mobile-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 80px 0 40px 40px;
+    background-color: var(--main-background-color);
+    z-index: 999;
+  
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .mobile-container.is-open {
+    transform: translateX(0);
+  } 
+  
+
+.close-mobile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 24px;
+    right: 24px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+}
+
+.mobile-navigation {
+}
+.mobile-list {
+}
+
+.mobile-item:not(:last-child), .mobile-adress-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mobile-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em; 
+    color: var(--header-accent-color);
+}
+.active {
+    color: var(--focus-background-color);
+}
+.mobile-wrapper {
+    margin-top: auto;
+
+}
+.mobile-adress {
+    margin-bottom: 48px;
+}
+.mobile-adress-list {
+}
+.mobile-mail {
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color: var(--adress-color);
+}
+.mobile-tel {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: var(--main-accent-color);
+}
+.team-social-list.social-mobile {
+    justify-content: flex-start;
+}
+.team-social-list {
+}
+.team-social-item {
+}
+.team-social-link {
+}
+.team-social-icon {
+} 
 /*-------Hero-------------*/
 
 .hero{
     margin-left: auto;
     margin-right: auto;
-    padding: 188px 0;
+    padding: 112px 0;
     text-align: center;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/hero-bg-image.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/hero-mobile-bg.jpg);
     background-color: var(--hero-background-color);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1440px;
     }
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/hero-mobile-bg@2x.jpg);
+  }
+}
 .hero-title{
     font-weight: 700;
-    font-size: 56px;
+    font-size: 36px;
     line-height: 1.2;
     letter-spacing: 0.02em;   
     color: var(--main-background-color);
-    margin-bottom: 48px;
-    width: 496px;
+    margin-bottom: 72px;
+    width: 100%;
+    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
     }

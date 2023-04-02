@@ -1,7 +1,10 @@
 @media screen and (min-width: 480px){
     .container{
         max-width: 428px;}  
-    
+    .mobile-tel {
+        font-size: 36px;
+            
+        }
 }
 @media screen and (max-width: 1199px) {
     .section {

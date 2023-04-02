@@ -1,19 +1,39 @@
 @media screen and (min-width: 768px) {
     .container{
         max-width: 768px;}
+    .open-mobile {
+        display: none;
+    }
+    .header {
+        padding: 0;
+    }
+    .header-list {
+        display: flex;
+    }
+    .adress-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 0;
+        
+    }  
     }        
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .team-list {
         flex-wrap: wrap;
-        gap: 0;
-        margin: -32px -12px;
-        padding: 0 93px;
-        }
+        gap: 64px 24px;
         
-    .team-item {
-        width:calc((100% - 24px * 2) / 2);
-        margin:32px 12px;  
+        padding: 0;
         }
+    .team .container {
+        max-width: 582px;
+    }  
+    .team-item {
+        width:calc((100% - 24px) / 2);
+        }
+    .hero-title {
+        margin-bottom: 36px;
+    }
 } 
     
 
